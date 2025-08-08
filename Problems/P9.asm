@@ -10,8 +10,6 @@ newl db 13,10,'$'
 main proc
    mov ax,@data
    mov ds,ax
-
-
    mov cx,3
 loop_:
    lea dx,msg
@@ -39,8 +37,7 @@ fff:
    int 21h
 
 
-   loop loop_
-   print:
+   loop :
    lea dx,msg2
    mov ah,9
    int 21h
