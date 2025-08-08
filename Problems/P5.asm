@@ -11,7 +11,7 @@ main proc
     loop:
         mov ah, 1
         int 21h
-        cmp al, ' '
+        cmp al, ' ' ; space 
         je output
         inc count ; count++
         jmp loop 
