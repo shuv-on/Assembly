@@ -4,18 +4,20 @@
 .code
 main proc
    mov cx,0
+   
+input:
    mov ah,1
-input_loop:
    cmp al,13
    je end_loop
    push ax
    inc cx
    int 21h
-   jmp input_loop
+   jmp input
 end_loop:
    jcxz exit
-   mov ah,2
+   
 print:
+   mov ah,2
    pop dx
    int 21h
    loop print
